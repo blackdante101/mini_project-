@@ -1,0 +1,384 @@
+/** 
+green : #4EBD65;
+
+**/
+
+
+*{
+	padding: 0px;
+	margin:0px;
+	font-family: 'Poppins', sans-serif;
+}
+.mt
+{
+margin-top: 100px;
+}
+.form-img
+{
+background-repeat:no-repeat;
+background-size: cover;
+}
+.signup-img
+{
+	background-image: url('../img/nurse.png');
+}
+.signin-img
+{
+	background-image: url('../img/doctor.jpg');
+}
+.sign-up-form
+{
+	height: 100vh !important;
+}
+.bg-green
+{
+	background-color:#4EBD65 !important;
+}
+.bg-deepergreen
+{
+	background-color:#2BAE66 !important;
+}
+.text-gray
+{
+	color:#CCCCCC;
+}
+.bot-card-img
+{
+	position: absolute;
+	top:-50;
+	left:-30;
+	height: 310px;
+	width:auto;
+}
+.text-deepergreen
+{
+	color:#2BAE66 !important;
+}
+.bot-card
+{
+	margin-top: 100px;
+}
+.form-input
+{
+	background-color:#84817a3b;
+	border-radius:5px;
+	display:inline-flex;
+	padding: 20px;
+	color:#707070;
+	font-size:18px;
+	width:80%;
+
+}
+.form-input input
+{
+	border:none;
+	background-color:transparent;
+	color:#707070;
+	width:95%;
+
+}
+.form-input input::placeholder
+{
+	color:#707070;
+}
+* input:focus
+{
+	outline:none;
+}
+.form-input i
+{
+	font-size: 30px;
+}
+.form-button
+{
+	padding:20px;
+	width:40%;
+}
+nav
+{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 2fr 4fr 2fr;
+	box-shadow: 2px 2px 1px #ccc;
+	background-color: white;
+
+
+}
+.search-input
+{
+	background-color:#84817a3b;
+	border-radius:50px;
+	display:inline-flex;
+	padding: 10px;
+	color:#707070;
+	font-size:17px;
+	width:80%;
+	
+
+}
+.search-input input 
+{
+	border:none;
+	background-color:transparent;
+	color:#707070;
+	width:93%;
+}
+.search-input i 
+{
+	margin-top: 4px;
+	margin-left: 5px;
+	width:7%;
+}
+.profile
+{
+	display:inline-flex;
+	float:right;
+	/*margin-right: 40px;*/
+}
+.profile-img
+{
+	background-image: url('../img/user.png');
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-size: cover;
+}
+.profile p
+{
+	margin-top: 8px;
+	margin-left: 10px;
+}
+.service-img
+{
+	height: 160px;
+	width:130px;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.service-card
+{
+	width:130px;
+	height: auto;
+	
+}
+.service-card h6
+{
+	margin-top:20px;
+
+}
+.service-card p
+{
+	color:#4EBD65;
+	margin-bottom: 0px !important;
+	display: none;
+}
+.service-btn
+{
+	background-color: #4EBD65;
+	color: white;
+	width:100%;
+	font-size: 15px;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+.banner h1 
+{
+	text-align: center;
+	color:white;
+	margin-top: 30px;
+	font-size: 3em;
+}
+.banner
+{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 100%;
+	padding: 50px;
+	margin-top: 50px;
+}
+.services-img
+{
+	background-image: linear-gradient(rgb(0,0,0,.5),rgb(0,0,0,.5)),url('../img/stethescope.jpg');
+
+}
+.faqs-img
+{
+	background-image: linear-gradient(rgb(0,0,0,.5),rgb(0,0,0,.5)),url('../img/faqs.jpg');
+
+}
+.servicerequest-img 
+{
+	height: 200px;
+	width:350px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 20px;
+}
+.err
+{
+	color:tomato;
+	margin-top: 20px;
+}
+.err-textbox
+{
+	border:1px solid tomato;
+}
+.healthtips-img
+{
+	background-image: linear-gradient(rgb(0,0,0,.5),rgb(0,0,0,.5)),url('../img/tips.jpg');
+}
+.tip-card
+{
+	width:250px;
+	height: auto;
+	background-color: #F8F8F8;
+	padding:20px;
+	border-radius: 20px;
+	
+}
+.tip-card h4
+{
+	text-align: center;
+}
+.tip-card img
+{
+	width:100px;
+	height:auto;
+	margin-left:20%;
+	margin-top: 10px;
+}
+.tip-card p 
+{
+	font-size:15px;
+}
+.bot-intro
+{
+	border-left:1px solid gray;
+}
+.chatbot-img
+{
+	background-image: url(../img/chatbot.png);
+	background-size: cover;
+}
+.bot-intro img
+{
+height: 200px;
+width: 200px;
+border-radius: 50%;
+margin-left:30%;
+}
+.navigation-card
+{
+	height: 150px;
+	width: 100%;
+	border-radius: 20px;
+	padding: 50px;
+	color:white;
+	text-align: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-decoration: none;
+}
+
+.logo
+{
+	color:#2BAE66 !important;
+	font-size:1.7em;
+	font-weight: bolder;
+}
+.nav-card 
+{
+	height: 150px;
+	width: auto;
+	-webkit-box-shadow: 0 0 4px #0000001f;
+        box-shadow: 0 0 4px #0000001f;
+	/*box-shadow: 2px 2px 1px #0000001f;*/
+	border-radius:10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.nav-card-icon
+{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card-icon 
+{
+	height:45px;
+	width:45px;
+}
+
+
+
+/** MOBILE VIEW**/
+@media(max-width:700px)
+{
+	.card-container
+	{
+		padding:30px;
+		margin-top: 40px !important;
+	}
+.form-input {
+	width:100%;
+}
+.form-button
+{
+	width:100%;
+}
+nav 
+{
+	grid-template-columns: 1fr 2fr;
+}
+#nav-item1
+{
+	display: none;
+}
+.profile-img
+{
+	height: 35px;
+	width:35px;
+
+}
+.profile
+{
+	margin-right: 0px !important;
+}
+.service-card
+{
+	margin:12px !important;
+}
+.banner h1
+{
+	margin-top: 0px !important;
+}
+.servicerequest-img
+{
+	width:auto;
+}
+.bot-card-img
+{
+	width: 100% !important;
+	left:0;
+}
+.bot-img-container
+{
+	height:250px;
+}
+.nav-card 
+{
+	justify-content: flex-start;
+}
+.nav-card-icon
+{
+	margin-left: 20px;
+}
+}

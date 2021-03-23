@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 16px;
+}
+.chat
+{
+  display: grid;
+  grid-template-columns: 95% 5%;
+  background-color: pink;
+  padding:10px;
+  background-color: white;
+  border-radius: 50px;
+  border:1px solid gray;
+  margin-top: 15px;
+
+}
+.chat input[type="text"]
+{
+  border:none;
+}
+.chat input[type="text"]::placeholder
+{
+  font-size: 1.3em;
+}
+.send-btn
+{
+  border-radius: 50% !important;
+  background-color: #4EBD65;
+  height: 50px;
+  width: 50px;
+
+}
+.container {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.chatbox {
+  width: 100%;
+  height: 445px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /**margin-top: 20px;**/
+  background: white;
+  border-radius: 10px;
+}
+
+.header {
+ 
+  padding: 20px;
+  color: #4EBD65;
+  font-size: 20px;
+}
+.header h1
+{
+  text-align: center;
+  font-weight: normal;
+}
+
+.avail {
+  font-size: 12px;
+  padding: 0 20px;
+}
+
+.avail::after {
+  content: "";
+  display: inline-block;
+  background: rgb(4, 180, 4);
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.body {
+  background: white;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+input {
+  height: 50px;
+  width: 100%;
+}
+
+input[type="text"] {
+  padding: 0 10px;
+}
+
+input[type="submit"] {
+  height: 25px;
+  border: 0;
+  background: #c9021ddc;
+  font-weight: 500;
+  font-size: 17px;
+  color: aliceblue;
+  cursor: pointer;
+}
+.visible {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.me {
+  width: 55%;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
+  background-color: #4EBD65;
+  border-radius: 10px;
+  color:white;
+  float: right;
+  text-align: right;
+  display: block;
+}
+
+.alicia {
+  width: 60%;
+  height: auto;
+  padding: 10px;
+  color:white;
+  margin: 5px;
+  background-color: #4EBD65;
+  border-radius: 10px;
+  float: left;
+  text-align: left;
+  display: block;
+ transition-delay: .5s;
+}

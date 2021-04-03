@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include '../class/chatbot.php';
 $chatbot = new Chatbot();
 
@@ -25,6 +26,14 @@ $chatbot = new Chatbot();
 		</div>
 		<div class="col-md-7 p-5">
 			<h2>Fill in the required fields</h2>
+			<?php
+			if(isset($_SESSION['bookingerr']))
+             {
+			 echo"<h6 class='text-danger'>".$_SESSION['bookingerr']."</h6>"; 
+	         }
+	         unset($_SESSION['bookingerr']);
+			 ?>
+		
 			<form method="POST" action="../processors/formprocessor.php">
 				<div class="form-group">
 					<div class="form-input mt-2">
@@ -35,6 +44,19 @@ $chatbot = new Chatbot();
 						<input type="text" name="last_name" placeholder="Last Name" required>
 						<i class="fa fa-user"></i>
 					</div>
+					<?php
+					if($_GET['id']=="4")
+					{
+						echo '<div class="form-input mt-2">
+						<select name="test_type">
+						<option>--- Select Lab Test Type ---</option>
+						<option>Blood Test</option>
+						<option>Malaria Test</option>
+						</select>
+					</div>';
+					}
+
+					 ?>
 					<div class="form-input mt-2">
 						<input type="text" name="town" placeholder="Town" required>
 						<i class="fa fa-map-marker"></i>

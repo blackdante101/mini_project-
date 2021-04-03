@@ -84,9 +84,17 @@ class Chatbot
 			';
 			$_SESSION['bookingtype'] = $title;
 		}
+
+
 	}
-	public function bookService($uid,$first_name,$last_name,$town,$phone_number,$service_type,$status)
+	public function bookService($uid,$first_name,$last_name,$town,$phone_number,$service_type,$status,$test_type)
 	{
+		if($test_type!="")
+		{
+			$service_type = $service_type ."(".$test_type.")";
+		}
+		
+
 		$stmt=$this->db->prepare("INSERT INTO bookings(uid,first_name,last_name,town,phone_number,service_type,status) VALUES (?,?,?,?,?,?,?)");
 		$stmt->bind_param("isssiss",$uid,$first_name,$last_name,$town,$phone_number,$service_type,$status);
 		$booked = $stmt->execute();
@@ -96,7 +104,8 @@ class Chatbot
 		}
 		else
 		{
-			header("location:servicerequest.php?err=1");
+			$_SESSION['bookingerr']="Error: You already booked this service";
+			header('Location: ' . $_SERVER['HTTP_REFERER']);
 		}
 
 	}
@@ -165,7 +174,7 @@ class Chatbot
              <td>'.$service.'</td>
              <td>'.$status.'</td>
              <td>
-             <a class="btn btn-sm btn-success" href="actions.php?id='.$id.'&action=Confirmed">Accept</a>
+             <a class="btn btn-sm btn-success" href="actions.php?id='.$id.'&action=Confirmed">Respond</a>
              <a class="btn btn-sm btn-danger" href="actions.php?id='.$id.'&action=Declined">Decline</a>
              </td>
              </tr>
@@ -174,7 +183,7 @@ class Chatbot
 	}
 	public function listConfirmedBookings()
 	{
-		$status = '<h6 class="text-success">Confirmed</h6>';
+		$status = "<h6 class='text-success'>Confirmed</h6>";
 		$stmt=$this->db->prepare("SELECT * FROM bookings WHERE status =?");
 		$stmt->bind_param('s',$status);
 		$stmt->execute();
@@ -205,7 +214,7 @@ class Chatbot
 		{
 			if($stmt->fetch())
 			{ 
-				$_SESSION['username'] = "admin";
+				$_SESSION['admin'] = "admin";
 				header('location:../admin/dashboard.php');
 			}
 

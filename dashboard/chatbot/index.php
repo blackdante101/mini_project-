@@ -16,7 +16,7 @@
            
                 <div class="chatbox">
             <div class="header">
-                <h1>DanteBot</h1>
+                <h1>HealthBot</h1>
             </div>
             <div class="body" id="chatbody">
                 <div class="scroller"></div>

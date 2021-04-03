@@ -1,9 +1,10 @@
 <?php 
 session_start();
-if(isset($_SESSION['username']))
+if(isset($_SESSION['username']))	
 {
 	header('location:dashboard/');
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@ if(isset($_SESSION['username']))
 		<div class="sign-up-form row">
 			<div class="col-md-6 p-5 form-img signin-img">
 				<h1>Making Health Services And Consultation Easier</h1>
-				<p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Deleniti esse, sapiente fugit quas dolorem. Dolores?</p>
+				<p></p>
 				
 			</div>
 			<div class="col-md-6 p-5 ">
@@ -42,13 +43,13 @@ if(isset($_SESSION['username']))
 
 				 ?>
 					<div class="form-group mt-4">
-						<div class="form-input<?php echo $err ?>">
+						<div class="form-input <?php echo $err ?>">
 							<input type="email" placeholder="Email" name="email" required>
 							<i class="fa fa-envelope"></i>
 						</div>
 					</div>
 					<div class="form-group mt-2">
-						<div class="form-input<?php echo $err ?>">
+						<div class="form-input <?php echo $err ?>">
 							<input type="password" placeholder="Password" name="password" required>
 							<i class="fa fa-key"></i>
 						</div>

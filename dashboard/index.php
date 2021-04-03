@@ -18,7 +18,7 @@
          </div>  
          <div class="col-md-8 bg-deepergreen p-5">
              <h3 class="text-white">Meet Our Virtual Agent</h3>
-             <p class="text-white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt rerum corrupti quisquam veniam, dolorem! Neque, ipsum libero doloribus ea iste!</p>
+             <p class="text-white">Our chatbot provides an intelligent solution that can keep up with the instant and personal nature of medical services and providing information.</p>
              <a href="chatbot/" class="btn bg-white text-deepergreen">Launch</a> 
          </div>
         </div>

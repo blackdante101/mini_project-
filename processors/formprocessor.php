@@ -25,10 +25,17 @@ if(isset($_POST['bookbtn']))
 	$first_name = $_POST['first_name'];
 	$last_name = $_POST['last_name'];
 	$town = $_POST['town'];
+	if (isset($_POST['test_type'])) {
+		$test_type = $_POST['test_type'];
+	}
+	else
+	{
+		$test_type="";
+	}
 	$phone_number = $_POST['phone_number'];
 	$service_type=$_POST['service_type'];
 	$status = '<h6 class="text-info">Pending</h6>';
-	$user->bookService($uid,$first_name,$last_name,$town,$phone_number,$service_type,$status);
+	$user->bookService($uid,$first_name,$last_name,$town,$phone_number,$service_type,$status,$test_type);
 }
 if(isset($_POST['admin_login']))
 {

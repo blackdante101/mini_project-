@@ -162,7 +162,7 @@ class Chatbot
 		$stmt=$this->db->prepare("SELECT * FROM bookings WHERE status =? ORDER BY id DESC");
 		$stmt->bind_param('s',$status);
 		$stmt->execute();
-		$stmt->bind_result($id,$uid,$fname,$lname,$town,$pnum,$service,$status);
+		$stmt->bind_result($id,$uid,$fname,$lname,$town,$pnum,$service,$status,$message);
 		while($stmt->fetch())
 		{
 			echo ' 
@@ -174,7 +174,7 @@ class Chatbot
              <td>'.$service.'</td>
              <td>'.$status.'</td>
              <td>
-             <a class="btn btn-sm btn-success" href="actions.php?id='.$id.'&action=Confirmed">Respond</a>
+             <a class="btn btn-sm btn-success" href="respond.php?id='.$id.'">Respond</a>
              <a class="btn btn-sm btn-danger" href="actions.php?id='.$id.'&action=Declined">Decline</a>
              </td>
              </tr>
@@ -187,7 +187,7 @@ class Chatbot
 		$stmt=$this->db->prepare("SELECT * FROM bookings WHERE status =?");
 		$stmt->bind_param('s',$status);
 		$stmt->execute();
-		$stmt->bind_result($id,$uid,$fname,$lname,$town,$pnum,$service,$status);
+		$stmt->bind_result($id,$uid,$fname,$lname,$town,$pnum,$service,$status,$message);
 		while($stmt->fetch())
 		{
 			echo ' 
@@ -222,6 +222,23 @@ class Chatbot
 		else
 		{
              header('location:../admin/index.php?s=err');
+		}
+	}
+	public function listBooking($id)
+	{
+		$stmt= $this->db->prepare("SELECT * FROM bookings WHERE id=?");
+		$stmt->bind_param("i",$id);
+		$stmt->execute();
+		$stmt->bind_result($id,$uid,$first_name,$last_name,$town,$phone,$service,$status,$message);
+		while($stmt->fetch())
+		{
+			echo "<tr>
+			<td>".$first_name."</td>
+			<td>".$last_name."</td>
+			<td>".$town."</td>
+			<td>".$phone."</td>
+			<td>".$service."</td>
+			</tr>";
 		}
 	}
 

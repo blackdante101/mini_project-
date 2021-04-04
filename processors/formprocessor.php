@@ -43,6 +43,10 @@ if(isset($_POST['admin_login']))
 	$password = $_POST['password'];
 	$user->adminLogin($first_name,$password);
 }
+if(isset($_POST['addmessage']))
+{
+	echo "test passed";
+}
 
 
  ?>

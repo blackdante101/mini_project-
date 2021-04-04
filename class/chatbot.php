@@ -93,10 +93,11 @@ class Chatbot
 		{
 			$service_type = $service_type ."(".$test_type.")";
 		}
+		$message ="";
 		
 
-		$stmt=$this->db->prepare("INSERT INTO bookings(uid,first_name,last_name,town,phone_number,service_type,status) VALUES (?,?,?,?,?,?,?)");
-		$stmt->bind_param("isssiss",$uid,$first_name,$last_name,$town,$phone_number,$service_type,$status);
+		$stmt=$this->db->prepare("INSERT INTO bookings(uid,first_name,last_name,town,phone_number,service_type,status,message) VALUES (?,?,?,?,?,?,?,?)");
+		$stmt->bind_param("isssisss",$uid,$first_name,$last_name,$town,$phone_number,$service_type,$status,$message);
 		$booked = $stmt->execute();
 		if($booked)
 		{
@@ -115,11 +116,14 @@ class Chatbot
 		$stmt= $this->db->prepare("SELECT * FROM bookings WHERE uid = ? ORDER BY id DESC");
 		$stmt->bind_param("i",$id);
 		$stmt->execute();
-		$stmt->bind_result($id,$uid,$fname,$lname,$town,$number,$service,$status);
+		$stmt->bind_result($id,$uid,$fname,$lname,$town,$number,$service,$status,$message);
         //$stmt->fetch();
 		//echo $stmt->num_rows;
 		//if($stmt->num_rows > 0)
 		//{
+
+
+
 		while($stmt->fetch())
 		{
 			echo '
@@ -131,7 +135,8 @@ class Chatbot
 			<p class="ml-3 text-secondary">
 			<span><i class="fa fa-user"></i>&nbsp;&nbsp;'.$fname.' '.$lname.'</span><br>
 			<span><i class="fa fa-map-marker"></i>&nbsp;&nbsp;'.$town.'</span><br>
-			<span><i class="fa fa-phone"></i>&nbsp;&nbsp;'.$number.'</span>
+			<span><i class="fa fa-phone"></i>&nbsp;&nbsp;'.$number.'</span><br>
+			<span>'.$message.'</span>
 
 			</p>
 			</div>
@@ -142,6 +147,7 @@ class Chatbot
 			</div>
 			</div>';
 		}
+
 	/*}
 	else
 	{
@@ -240,6 +246,17 @@ class Chatbot
 			<td>".$service."</td>
 			</tr>";
 		}
+	}
+	public function confirmBooking($id,$status,$message)
+	{
+		$message = "<b>Comment:</b>&nbsp;".$message;
+	$stmt = $this->db->prepare("UPDATE bookings SET message=?,status=? WHERE id=?");
+	$stmt->bind_param("ssi",$message,$status,$id);
+	$message=$stmt->execute();
+	if($message)
+	{
+		header("location:../admin/");
+	}
 	}
 
 }

@@ -45,7 +45,10 @@ if(isset($_POST['admin_login']))
 }
 if(isset($_POST['addmessage']))
 {
-	echo "test passed";
+	$id = $_POST['id'];
+	$status = "<h6 class='text-success'>Confirmed</h6>";
+	$message = $_POST['message'];
+	$user->confirmBooking($id,$status,$message);
 }
 
 

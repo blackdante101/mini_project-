@@ -34,6 +34,7 @@
 					<?php
 					$id = $_GET['id'];
 					$chatbot->listBooking($id);
+
 					 ?>
 				
 			</tbody>
@@ -42,6 +43,7 @@
       <form method="POST" action="../processors/formprocessor.php">
       	<div class="form-group">
       		 <textarea class="form-control" name="message" id="" cols="30" rows="5"></textarea>
+      		 <input type="hidden" value="<?echo $id; ?>" name="id">
       	</div>
       <button name="addmessage" class="btn btn-success">submit</button>
   </form>

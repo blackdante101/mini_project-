@@ -257,6 +257,10 @@ class Chatbot
 	{
 		header("location:../admin/");
 	}
+	else
+	{
+		echo "error";
+	}
 	}
 
 }

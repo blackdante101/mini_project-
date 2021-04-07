@@ -249,7 +249,7 @@ class Chatbot
 	}
 	public function confirmBooking($id,$status,$message)
 	{
-		$message = "<b>Comment:</b>&nbsp;".$message;
+	$message = "<b>Comment:</b>&nbsp;".$message;
 	$stmt = $this->db->prepare("UPDATE bookings SET message=?,status=? WHERE id=?");
 	$stmt->bind_param("ssi",$message,$status,$id);
 	$message=$stmt->execute();

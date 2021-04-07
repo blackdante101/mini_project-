@@ -62,7 +62,7 @@ $chatbot = new Chatbot();
 						<i class="fa fa-map-marker"></i>
 					</div>
 					<div class="form-input mt-2">
-						<input type="text" name="phone_number" placeholder="Phone Number" required>
+						<input type="text" maxlength="10" name="phone_number" placeholder="Phone Number" required>
 						<i class="fa fa-phone"></i>
 					</div>
 					<input type="hidden" name="service_type" value="<?php echo $_SESSION['bookingtype']; ?>">

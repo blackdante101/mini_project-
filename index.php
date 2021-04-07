@@ -50,7 +50,7 @@ if(isset($_SESSION['username']))
 					</div>
 					<div class="form-group mt-2">
 						<div class="form-input <?php echo $err ?>">
-							<input type="password" placeholder="Password" name="password" required>
+							<input type="password"  placeholder="Password" name="password" required>
 							<i class="fa fa-key"></i>
 						</div>
 					</div>

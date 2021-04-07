@@ -14,7 +14,7 @@ $chatbot = new Chatbot();
 </head>
 <body>
 <?php include 'navbar.php'; ?>
-	<div class="banner mt services-img">
+	<div class="banner  services-img">
 	 <h1>Our Services</h1>
 	</div>
 	<div class="container p-5">

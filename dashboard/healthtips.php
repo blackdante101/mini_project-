@@ -18,7 +18,7 @@
 </head>
 <body>
 	<?php include 'navbar.php'; ?>
-	<div class="banner mt healthtips-img">
+	<div class="banner healthtips-img">
 	 <h1>Health Tips</h1>
 	</div>
 	<div class="container  p-5">

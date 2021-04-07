@@ -15,18 +15,6 @@
 	<div class="container mt-5">
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      <h4>What do I do if I cannot be available during the booked appointment?</h4>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-       We understand that sometimes treatments/procedures can go beyond schedule. Incase you are not able to attend the appointment, you have the option to recommend another time to the patient and if accepted by the patient, the appointment will be rescheduled else the full payment will be refunded back to the customer
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
        <h4>I am not very technology savvy…what do I do?</h4>
@@ -46,7 +34,7 @@
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        Sorry about it. Please send an email to support@c2mydr.com and we will respond back to you on the same.
+        Sorry about it. Please send an email to healthchatbot@gmail.com and we will respond back to you on the same.
       </div>
     </div>
   </div>

@@ -17,15 +17,20 @@ if (isset($_GET['msg'])) {
         if ($msg == 'hi' || $msg == "hello") {
             $botty->reply('Hello there!');
         } 
-		elseif($msg == "am sick" || $msg =="i am not feeling well" ){
+		elseif($msg == "i am sick" || $msg =="i am not feeling well" ){
 			$botty->reply("what's the problem");
 		}
-		elseif($msg == "i have a headache" || $msg =="my headaches" ){
+		elseif($msg == "i have a headache" || $msg =="my headaches" || $msg="i have headache" ){
 			$botty->reply("take water and sleep if serious call a doctor");
 		}
+		elseif($msg == "i need to see a doctor" || $msg =="i need a doctor"){
+			$botty->reply("you can go to the dashboard and book a service there, plewae make sure you the infromation about currectly, and you will hear from us as soon as possible");
+		}
+		elseif($msg == "my stomach hurts" || $msg =="my stomach hurts really bad"){
+			$botty->reply("What i will recommend is to the a ");
 	
 	elseif($msg == "i need a doctor" || $msg =="i want to see a doctor" ){
-			$botty->reply("i amd here to assist you,please tell me what is wrong with you");
+			$botty->reply("i and here to assist you,please tell me what is wrong with you");
 		}
 	elseif($msg == "gm" || $msg =="good morning" ){
 			$botty->reply("good morning");
@@ -34,7 +39,7 @@ if (isset($_GET['msg'])) {
 			$botty->reply("good afternoon");
 		}
 	elseif($msg == "ge" || $msg =="good evening" ){
-			$botty->reply("good eveing");
+			$botty->reply("good evening");
 		}
 	elseif($msg == "i am having a running stomach" || $msg =="am running" ){
 			$botty->reply("take in a cup of water and go to the nearest pharmacy");
@@ -64,7 +69,7 @@ if (isset($_GET['msg'])) {
 	elseif($msg == "what is your name" || $msg =="what should i call you" ){
 			$botty->reply("my developers are still working on that");
 		}
-	elseif($msg == "am dieing" || $msg =="i feel like dieing" ){
+	elseif($msg == "i am dieing" || $msg =="i feel like dieing" ){
 			$botty->reply("dieing is a bad word to say");
 		}
 	elseif($msg == "thanks" || $msg =="thank you" ){
@@ -81,7 +86,7 @@ if (isset($_GET['msg'])) {
 		}
 	
 		elseif ($botty->ask($msg, $questions) == "") {
-            $botty->reply("Can't respond to that <br> Try contacting us on dante@gmail.com");
+            $botty->reply("Can't respond to that <br> Try contacting us on heatlhchatbot@gmail.com");
         } else {
             $botty->reply($botty->ask($msg, $questions));
         }
